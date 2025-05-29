@@ -43,7 +43,7 @@ export default function BedroomScene() {
       <div 
         className="w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url("/bedroom-scene.png")`
+          backgroundImage: `url("${isDarkMode ? "/bedroom-scene-dark.png" : "/bedroom-scene.png"}")`
         }}
       />
       
@@ -57,12 +57,21 @@ export default function BedroomScene() {
         </div>
       )}
       
+      {/* Dark Mode Toggle */}
+      <button
+        onClick={toggleTheme}
+        className="absolute top-4 right-4 z-30 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
+      </button>
+      
       {/* Interactive Hotspots */}
       {imageLoaded && (
         <>
-          {/* Laptop on desk - Projects */}
+          {/* Laptop screen - Projects */}
           <Hotspot
-            position={getResponsivePosition(400, 180)}
+            position={getResponsivePosition(380, 190)}
             size="large"
             icon="fas fa-laptop"
             label="Projects"
@@ -70,9 +79,9 @@ export default function BedroomScene() {
             onClick={() => openModal("projects")}
           />
           
-          {/* Wall frame - Certificates */}
+          {/* Wall frame above desk - Certificates */}
           <Hotspot
-            position={getResponsivePosition(250, 120)}
+            position={getResponsivePosition(320, 100)}
             size="medium"
             icon="fas fa-certificate"
             label="Certificates"
@@ -80,9 +89,9 @@ export default function BedroomScene() {
             onClick={() => openModal("certificates")}
           />
           
-          {/* Cat on floor - Fun Facts */}
+          {/* Cat sleeping on rug - Fun Facts */}
           <Hotspot
-            position={getResponsivePosition(420, 250)}
+            position={getResponsivePosition(450, 270)}
             size="small"
             icon="fas fa-cat"
             label="Fun Facts"
@@ -90,9 +99,9 @@ export default function BedroomScene() {
             onClick={() => openModal("funfacts")}
           />
           
-          {/* Bookshelf behind desk - Skills */}
+          {/* Bookshelf on left - Skills */}
           <Hotspot
-            position={getResponsivePosition(200, 160)}
+            position={getResponsivePosition(180, 140)}
             size="medium"
             icon="fas fa-book"
             label="Skills"
@@ -100,9 +109,9 @@ export default function BedroomScene() {
             onClick={() => openModal("skills")}
           />
           
-          {/* Bed area - About Me */}
+          {/* Bed with pillows - About Me */}
           <Hotspot
-            position={getResponsivePosition(150, 200)}
+            position={getResponsivePosition(120, 180)}
             size="large"
             icon="fas fa-user"
             label="About Me"
@@ -110,9 +119,9 @@ export default function BedroomScene() {
             onClick={() => openModal("about")}
           />
           
-          {/* Balcony/Window area - Contact */}
+          {/* Balcony area with plants - Contact */}
           <Hotspot
-            position={getResponsivePosition(650, 120)}
+            position={getResponsivePosition(680, 160)}
             size="medium"
             icon="fas fa-envelope"
             label="Contact"
@@ -120,9 +129,9 @@ export default function BedroomScene() {
             onClick={() => openModal("contact")}
           />
           
-          {/* Desk papers - Resume */}
+          {/* Desk with papers - Resume */}
           <Hotspot
-            position={getResponsivePosition(380, 200)}
+            position={getResponsivePosition(360, 220)}
             size="small"
             icon="fas fa-file-pdf"
             label="Resume"
@@ -130,9 +139,9 @@ export default function BedroomScene() {
             onClick={() => openModal("resume")}
           />
           
-          {/* Plants around room - Hobbies */}
+          {/* Hanging plants - Hobbies */}
           <Hotspot
-            position={getResponsivePosition(500, 120)}
+            position={getResponsivePosition(520, 80)}
             size="small"
             icon="fas fa-seedling"
             label="Hobbies"
