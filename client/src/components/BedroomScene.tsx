@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import Hotspot from "./Hotspot";
 import { usePortfolio } from "../lib/stores/usePortfolio";
+import { useTheme } from "../lib/stores/useTheme";
 
 export default function BedroomScene() {
   const { openModal } = usePortfolio();
+  const { isDarkMode, toggleTheme } = useTheme();
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
@@ -17,8 +19,8 @@ export default function BedroomScene() {
     img.onerror = () => {
       console.error('Failed to load bedroom image');
     };
-    img.src = "/bedroom-scene.png";
-  }, []);
+    img.src = isDarkMode ? "/bedroom-scene-dark.png" : "/bedroom-scene.png";
+  }, [isDarkMode]);
 
   const getResponsivePosition = (x: number, y: number) => {
     if (!imageLoaded) return { left: '50%', top: '50%' };
