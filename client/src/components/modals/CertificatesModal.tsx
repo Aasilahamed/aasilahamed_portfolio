@@ -1,0 +1,178 @@
+import { useState } from "react";
+
+interface CertificatesModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+interface Certificate {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  image: string;
+  credentialId?: string;
+  verifyUrl?: string;
+}
+
+const certificates: Certificate[] = [
+  {
+    id: 1,
+    title: "AWS Certified Solutions Architect",
+    issuer: "Amazon Web Services",
+    date: "March 2024",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23FF9900'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%23232F3E' font-size='16' font-weight='bold'%3EAWS Certified%3C/text%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23232F3E' font-size='14'%3ESolutions Architect%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23FF9900' font-size='12'%3EAssociate Level%3C/text%3E%3Crect x='80' y='180' width='240' height='2' fill='%23FF9900'/%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%23232F3E' font-size='12'%3EMarch 2024%3C/text%3E%3C/svg%3E",
+    credentialId: "AWS-SAA-123456",
+    verifyUrl: "https://aws.amazon.com/certification/verify"
+  },
+  {
+    id: 2,
+    title: "Google Cloud Professional Developer",
+    issuer: "Google Cloud",
+    date: "January 2024",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%234285F4'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%234285F4' font-size='16' font-weight='bold'%3EGoogle Cloud%3C/text%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%234285F4' font-size='14'%3EProfessional%3C/text%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%234285F4' font-size='14'%3ECloud Developer%3C/text%3E%3Crect x='80' y='170' width='240' height='2' fill='%23EA4335'/%3E%3Ctext x='200' y='200' text-anchor='middle' fill='%234285F4' font-size='12'%3EJanuary 2024%3C/text%3E%3C/svg%3E",
+    credentialId: "GCP-PCD-789012",
+    verifyUrl: "https://cloud.google.com/certification/verify"
+  },
+  {
+    id: 3,
+    title: "React Developer Certification",
+    issuer: "Meta",
+    date: "November 2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2361DAFB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='200' cy='120' r='20' fill='%2361DAFB'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2' transform='rotate(60 200 120)'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2' transform='rotate(-60 200 120)'/%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%2361DAFB' font-size='16' font-weight='bold'%3EReact Developer%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%2361DAFB' font-size='14'%3ECertified by Meta%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%2361DAFB' font-size='12'%3ENovember 2023%3C/text%3E%3C/svg%3E",
+    credentialId: "META-RDC-345678",
+    verifyUrl: "https://developers.facebook.com/certification/verify"
+  },
+  {
+    id: 4,
+    title: "Kubernetes Administrator (CKA)",
+    issuer: "Cloud Native Computing Foundation",
+    date: "September 2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23326CE5'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Cpath d='M200 80 L180 100 L200 120 L220 100 Z' fill='%23326CE5'/%3E%3Ccircle cx='200' cy='100' r='15' fill='none' stroke='%23326CE5' stroke-width='2'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23326CE5' font-size='16' font-weight='bold'%3EKubernetes%3C/text%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%23326CE5' font-size='14'%3EAdministrator%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%23326CE5' font-size='12'%3E(CKA)%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%23326CE5' font-size='12'%3ESeptember 2023%3C/text%3E%3C/svg%3E",
+    credentialId: "CNCF-CKA-901234",
+    verifyUrl: "https://training.linuxfoundation.org/certification/verify"
+  }
+];
+
+export default function CertificatesModal({ isOpen, onClose }: CertificatesModalProps) {
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      
+      {/* Modal */}
+      <div className="relative bg-card text-card-foreground rounded-lg p-6 max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-border shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <i className="fas fa-certificate text-2xl text-primary"></i>
+            <h2 className="text-2xl font-bold">Certificates & Credentials</h2>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+          >
+            <i className="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        
+        {!selectedCertificate ? (
+          /* Certificates Grid */
+          <div className="grid md:grid-cols-2 gap-6">
+            {certificates.map((certificate) => (
+              <div
+                key={certificate.id}
+                className="bg-muted rounded-lg overflow-hidden cursor-pointer transition-all hover:scale-105 hover:shadow-lg"
+                onClick={() => setSelectedCertificate(certificate)}
+              >
+                <img
+                  src={certificate.image}
+                  alt={certificate.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg mb-2">{certificate.title}</h3>
+                  <p className="text-primary font-medium mb-1">{certificate.issuer}</p>
+                  <p className="text-muted-foreground text-sm mb-3">{certificate.date}</p>
+                  {certificate.credentialId && (
+                    <p className="text-xs text-muted-foreground font-mono bg-muted-foreground/10 px-2 py-1 rounded">
+                      ID: {certificate.credentialId}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* Certificate Detail View */
+          <div>
+            <button
+              onClick={() => setSelectedCertificate(null)}
+              className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-4"
+            >
+              <i className="fas fa-arrow-left"></i>
+              Back to Certificates
+            </button>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <img
+                  src={selectedCertificate.image}
+                  alt={selectedCertificate.title}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+              <div className="flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-4">{selectedCertificate.title}</h3>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-building text-primary"></i>
+                    <span className="text-muted-foreground">Issued by:</span>
+                    <span className="font-medium">{selectedCertificate.issuer}</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-calendar text-primary"></i>
+                    <span className="text-muted-foreground">Date:</span>
+                    <span className="font-medium">{selectedCertificate.date}</span>
+                  </div>
+                  
+                  {selectedCertificate.credentialId && (
+                    <div className="flex items-center gap-3">
+                      <i className="fas fa-id-card text-primary"></i>
+                      <span className="text-muted-foreground">Credential ID:</span>
+                      <span className="font-mono text-sm bg-muted px-2 py-1 rounded">
+                        {selectedCertificate.credentialId}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                
+                {selectedCertificate.verifyUrl && (
+                  <a
+                    href={selectedCertificate.verifyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors w-fit"
+                  >
+                    <i className="fas fa-external-link-alt"></i>
+                    Verify Certificate
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
