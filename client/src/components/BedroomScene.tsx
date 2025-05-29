@@ -10,11 +10,15 @@ export default function BedroomScene() {
   useEffect(() => {
     const img = new Image();
     img.onload = () => {
+      console.log('Image loaded:', img.naturalWidth, img.naturalHeight);
       setImageDimensions({ width: img.naturalWidth, height: img.naturalHeight });
       setImageLoaded(true);
     };
+    img.onerror = () => {
+      console.error('Failed to load bedroom image');
+    };
     img.src = "/bedroom-scene.png";
-  });
+  }, []);
 
   const getResponsivePosition = (x: number, y: number) => {
     if (!imageLoaded) return { left: '50%', top: '50%' };
@@ -29,6 +33,8 @@ export default function BedroomScene() {
     };
   };
 
+  console.log('BedroomScene render - imageLoaded:', imageLoaded, 'dimensions:', imageDimensions);
+
   return (
     <div className="w-full h-full relative overflow-hidden">
       {/* Background bedroom image */}
@@ -38,6 +44,16 @@ export default function BedroomScene() {
           backgroundImage: `url("/bedroom-scene.png")`
         }}
       />
+      
+      {/* Loading indicator */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center bg-background">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading bedroom scene...</p>
+          </div>
+        </div>
+      )}
       
       {/* Interactive Hotspots */}
       {imageLoaded && (
