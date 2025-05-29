@@ -13,8 +13,7 @@ export default function BedroomScene() {
       setImageDimensions({ width: img.naturalWidth, height: img.naturalHeight });
       setImageLoaded(true);
     };
-    // Using a placeholder bedroom scene - in real implementation, you'd use the actual image
-    img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 768'%3E%3Crect width='1024' height='768' fill='%238B4513'/%3E%3Crect x='0' y='500' width='1024' height='268' fill='%23DEB887'/%3E%3Crect x='100' y='300' width='200' height='150' fill='%23654321'/%3E%3Crect x='120' y='320' width='160' height='100' fill='%23000'/%3E%3Crect x='400' y='400' width='200' height='100' fill='%238B4513'/%3E%3Crect x='450' y='380' width='100' height='20' fill='%23C0C0C0'/%3E%3Crect x='800' y='200' width='150' height='200' fill='%23DEB887'/%3E%3Crect x='820' y='220' width='110' height='160' fill='%23FFF'/%3E%3Ccircle cx='200' cy='600' r='30' fill='%23FF6347'/%3E%3Crect x='700' y='100' width='80' height='120' fill='%23228B22'/%3E%3C/svg%3E";
+    img.src = "/bedroom-scene.png";
   });
 
   const getResponsivePosition = (x: number, y: number) => {
@@ -36,7 +35,7 @@ export default function BedroomScene() {
       <div 
         className="w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 768'%3E%3Crect width='1024' height='768' fill='%238B4513'/%3E%3Crect x='0' y='500' width='1024' height='268' fill='%23DEB887'/%3E%3Crect x='100' y='300' width='200' height='150' fill='%23654321'/%3E%3Crect x='120' y='320' width='160' height='100' fill='%23000'/%3E%3Crect x='400' y='400' width='200' height='100' fill='%238B4513'/%3E%3Crect x='450' y='380' width='100' height='20' fill='%23C0C0C0'/%3E%3Crect x='800' y='200' width='150' height='200' fill='%23DEB887'/%3E%3Crect x='820' y='220' width='110' height='160' fill='%23FFF'/%3E%3Ccircle cx='200' cy='600' r='30' fill='%23FF6347'/%3E%3Crect x='700' y='100' width='80' height='120' fill='%23228B22'/%3E%3C/svg%3E")`
+          backgroundImage: `url("/bedroom-scene.png")`
         }}
       />
       
@@ -45,7 +44,7 @@ export default function BedroomScene() {
         <>
           {/* Laptop on desk - Projects */}
           <Hotspot
-            position={getResponsivePosition(500, 390)}
+            position={getResponsivePosition(400, 180)}
             size="large"
             icon="fas fa-laptop"
             label="Projects"
@@ -55,7 +54,7 @@ export default function BedroomScene() {
           
           {/* Wall frame - Certificates */}
           <Hotspot
-            position={getResponsivePosition(875, 300)}
+            position={getResponsivePosition(250, 120)}
             size="medium"
             icon="fas fa-certificate"
             label="Certificates"
@@ -65,7 +64,7 @@ export default function BedroomScene() {
           
           {/* Cat on floor - Fun Facts */}
           <Hotspot
-            position={getResponsivePosition(200, 600)}
+            position={getResponsivePosition(420, 250)}
             size="small"
             icon="fas fa-cat"
             label="Fun Facts"
@@ -73,9 +72,9 @@ export default function BedroomScene() {
             onClick={() => openModal("funfacts")}
           />
           
-          {/* Bookshelf - Skills */}
+          {/* Bookshelf behind desk - Skills */}
           <Hotspot
-            position={getResponsivePosition(740, 160)}
+            position={getResponsivePosition(200, 160)}
             size="medium"
             icon="fas fa-book"
             label="Skills"
@@ -85,7 +84,7 @@ export default function BedroomScene() {
           
           {/* Bed area - About Me */}
           <Hotspot
-            position={getResponsivePosition(500, 500)}
+            position={getResponsivePosition(150, 200)}
             size="large"
             icon="fas fa-user"
             label="About Me"
@@ -93,9 +92,9 @@ export default function BedroomScene() {
             onClick={() => openModal("about")}
           />
           
-          {/* Window area - Contact */}
+          {/* Balcony/Window area - Contact */}
           <Hotspot
-            position={getResponsivePosition(50, 200)}
+            position={getResponsivePosition(650, 120)}
             size="medium"
             icon="fas fa-envelope"
             label="Contact"
@@ -103,9 +102,9 @@ export default function BedroomScene() {
             onClick={() => openModal("contact")}
           />
           
-          {/* Desk area - Resume */}
+          {/* Desk papers - Resume */}
           <Hotspot
-            position={getResponsivePosition(550, 420)}
+            position={getResponsivePosition(380, 200)}
             size="small"
             icon="fas fa-file-pdf"
             label="Resume"
@@ -113,9 +112,9 @@ export default function BedroomScene() {
             onClick={() => openModal("resume")}
           />
           
-          {/* Plants - Hobbies */}
+          {/* Plants around room - Hobbies */}
           <Hotspot
-            position={getResponsivePosition(750, 500)}
+            position={getResponsivePosition(500, 120)}
             size="small"
             icon="fas fa-seedling"
             label="Hobbies"
