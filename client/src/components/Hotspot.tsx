@@ -36,13 +36,13 @@ export default function Hotspot({ position, size, icon, label, description, onCl
       <button
         className={`
           ${getSizeClasses()}
-          bg-primary/80 hover:bg-primary
+          bg-white/10 hover:bg-white/20
           text-white rounded-full
           flex items-center justify-center
           cursor-pointer transition-all duration-300
-          hover:scale-110 hover:shadow-lg hover:shadow-primary/50
+          hover:scale-110 hover:shadow-lg hover:shadow-white/30
           hotspot-pulse
-          backdrop-blur-sm border-2 border-white/20
+          backdrop-blur-sm border-2 border-white/15 hover:border-white/30
         `}
         onClick={onClick}
         aria-label={label}

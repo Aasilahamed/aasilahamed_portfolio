@@ -62,22 +62,29 @@ export default function Portfolio() {
         <HobbiesModal isOpen={true} onClose={closeModal} />
       )}
       
-      {/* Welcome overlay */}
+      {/* Welcome Title */}
       {showWelcome && (
-        <div className={`absolute top-4 left-4 z-10 backdrop-blur-sm rounded-lg p-4 max-w-sm transition-all duration-1000 ${
-          showWelcome ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4'
-        } ${
-          isDarkMode 
-            ? 'bg-black/70 text-white border border-white/20' 
-            : 'bg-white/80 text-gray-800 border border-black/20'
-        }`}>
-          <h1 className="text-xl font-bold mb-2">Welcome to the Portfolio of</h1>
-          <h2 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-blue-300' : 'text-blue-600'}`}>
-            S AASIL AHAMED
-          </h2>
-          <p className="text-sm opacity-90">
-            Click on different objects in the room to explore my work, skills, and experience!
-          </p>
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
+          <div className="text-center transition-all duration-1000 animate-fade-in">
+            <h1 className="text-white font-kalam text-4xl md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-2xl" 
+                style={{ 
+                  textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'
+                }}>
+              WELCOME TO THE
+            </h1>
+            <h2 className="text-white font-kalam text-3xl md:text-4xl lg:text-5xl font-bold mb-3 drop-shadow-2xl"
+                style={{ 
+                  textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'
+                }}>
+              PORTFOLIO OF
+            </h2>
+            <h3 className="text-white font-kalam text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-2xl"
+                style={{ 
+                  textShadow: '4px 4px 8px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.7)'
+                }}>
+              S AASIL AHAMED
+            </h3>
+          </div>
         </div>
       )}
       
