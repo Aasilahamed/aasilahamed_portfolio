@@ -64,8 +64,8 @@ export default function BedroomScene() {
         <>
           {/* Laptop screen - Projects */}
           <Hotspot
-            position={getResponsivePosition(400, 215)}
-            size="large"
+            position={getResponsivePosition(385, 210)}
+            size="medium"
             icon="fas fa-laptop"
             label="Projects"
             description="View my latest work"
@@ -74,7 +74,7 @@ export default function BedroomScene() {
           
           {/* Wall frame above desk - Certificates */}
           <Hotspot
-            position={getResponsivePosition(355, 125)}
+            position={getResponsivePosition(340, 115)}
             size="medium"
             icon="fas fa-certificate"
             label="Certificates"
@@ -84,7 +84,7 @@ export default function BedroomScene() {
           
           {/* Cat sleeping on rug - Fun Facts */}
           <Hotspot
-            position={getResponsivePosition(480, 285)}
+            position={getResponsivePosition(480, 280)}
             size="small"
             icon="fas fa-cat"
             label="Fun Facts"
@@ -92,20 +92,10 @@ export default function BedroomScene() {
             onClick={() => openModal("funfacts")}
           />
           
-          {/* Bookshelf on left - Skills */}
-          <Hotspot
-            position={getResponsivePosition(150, 195)}
-            size="medium"
-            icon="fas fa-book"
-            label="Skills"
-            description="Technical expertise"
-            onClick={() => openModal("skills")}
-          />
-          
           {/* Bed with pillows - About Me */}
           <Hotspot
-            position={getResponsivePosition(120, 175)}
-            size="large"
+            position={getResponsivePosition(120, 180)}
+            size="medium"
             icon="fas fa-user"
             label="About Me"
             description="My story and background"
@@ -114,7 +104,7 @@ export default function BedroomScene() {
           
           {/* Balcony area with plants - Contact */}
           <Hotspot
-            position={getResponsivePosition(720, 185)}
+            position={getResponsivePosition(650, 180)}
             size="medium"
             icon="fas fa-envelope"
             label="Contact"
@@ -122,24 +112,34 @@ export default function BedroomScene() {
             onClick={() => openModal("contact")}
           />
           
-          {/* Desk with papers - Resume */}
+          {/* Plant pot - Hobbies */}
           <Hotspot
-            position={getResponsivePosition(350, 245)}
-            size="small"
-            icon="fas fa-file-pdf"
-            label="Resume"
-            description="Download my CV"
-            onClick={() => openModal("resume")}
-          />
-          
-          {/* Plants area - Hobbies */}
-          <Hotspot
-            position={getResponsivePosition(590, 195)}
+            position={getResponsivePosition(320, 240)}
             size="small"
             icon="fas fa-seedling"
             label="Hobbies"
             description="Personal interests"
             onClick={() => openModal("hobbies")}
+          />
+          
+          {/* Resume/Skills - combining into one section */}
+          <Hotspot
+            position={getResponsivePosition(180, 140)}
+            size="medium"
+            icon="fas fa-book"
+            label="Skills"
+            description="Technical expertise"
+            onClick={() => openModal("skills")}
+          />
+          
+          {/* Resume at desk papers */}
+          <Hotspot
+            position={getResponsivePosition(420, 240)}
+            size="small"
+            icon="fas fa-file-pdf"
+            label="Resume"
+            description="Download my CV"
+            onClick={() => openModal("resume")}
           />
         </>
       )}

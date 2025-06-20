@@ -5,10 +5,12 @@ interface ThemeState {
   toggleTheme: () => void;
 }
 
-export const useTheme = create<ThemeState>((set) => ({
+export const useTheme = create<ThemeState>((set, get) => ({
   isDarkMode: false,
   
   toggleTheme: () => {
-    set((state) => ({ isDarkMode: !state.isDarkMode }));
+    const newDarkMode = !get().isDarkMode;
+    set({ isDarkMode: newDarkMode });
+    console.log('Theme toggled to:', newDarkMode ? 'dark' : 'light');
   }
 }));

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BedroomScene from "./BedroomScene";
 import ProjectsModal from "./modals/ProjectsModal";
 import CertificatesModal from "./modals/CertificatesModal";
@@ -14,6 +14,15 @@ import { useTheme } from "../lib/stores/useTheme";
 export default function Portfolio() {
   const { activeModal, closeModal } = usePortfolio();
   const { isDarkMode } = useTheme();
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcome(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="w-full h-full relative">
@@ -54,19 +63,23 @@ export default function Portfolio() {
       )}
       
       {/* Welcome overlay */}
-      <div className={`absolute top-4 left-4 z-10 backdrop-blur-sm rounded-lg p-4 max-w-sm transition-all duration-500 ${
-        isDarkMode 
-          ? 'bg-black/70 text-white border border-white/20' 
-          : 'bg-white/80 text-gray-800 border border-black/20'
-      }`}>
-        <h1 className="text-xl font-bold mb-2">Welcome to the Portfolio of</h1>
-        <h2 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-blue-300' : 'text-blue-600'}`}>
-          S AASIL AHAMED
-        </h2>
-        <p className="text-sm opacity-90">
-          Click on different objects in the room to explore my work, skills, and experience!
-        </p>
-      </div>
+      {showWelcome && (
+        <div className={`absolute top-4 left-4 z-10 backdrop-blur-sm rounded-lg p-4 max-w-sm transition-all duration-1000 ${
+          showWelcome ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4'
+        } ${
+          isDarkMode 
+            ? 'bg-black/70 text-white border border-white/20' 
+            : 'bg-white/80 text-gray-800 border border-black/20'
+        }`}>
+          <h1 className="text-xl font-bold mb-2">Welcome to the Portfolio of</h1>
+          <h2 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-blue-300' : 'text-blue-600'}`}>
+            S AASIL AHAMED
+          </h2>
+          <p className="text-sm opacity-90">
+            Click on different objects in the room to explore my work, skills, and experience!
+          </p>
+        </div>
+      )}
       
       {/* Instructions */}
       <div className="absolute bottom-4 right-4 z-10 bg-black/50 backdrop-blur-sm rounded-lg p-3 text-white text-sm">
