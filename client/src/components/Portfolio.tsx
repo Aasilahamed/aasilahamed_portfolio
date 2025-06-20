@@ -62,22 +62,23 @@ export default function Portfolio() {
         <HobbiesModal isOpen={true} onClose={closeModal} />
       )}
       
-      {/* Welcome overlay */}
+      {/* Welcome Message */}
       {showWelcome && (
-        <div className={`absolute top-4 left-4 z-10 backdrop-blur-sm rounded-lg p-4 max-w-sm transition-all duration-1000 ${
-          showWelcome ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4'
-        } ${
-          isDarkMode 
-            ? 'bg-black/70 text-white border border-white/20' 
-            : 'bg-white/80 text-gray-800 border border-black/20'
-        }`}>
-          <h1 className="text-xl font-bold mb-2">Welcome to the Portfolio of</h1>
-          <h2 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-blue-300' : 'text-blue-600'}`}>
-            S AASIL AHAMED
-          </h2>
-          <p className="text-sm opacity-90">
-            Click on different objects in the room to explore my work, skills, and experience!
-          </p>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="text-center text-white px-8">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2 animate-fade-in tracking-wider">
+              WELCOME TO THE
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 animate-fade-in tracking-wider">
+              PORTFOLIO OF
+            </h2>
+            <h1 className="text-4xl md:text-6xl font-black mb-2 animate-fade-in-delay text-orange-400 tracking-widest">
+              S AASIL AHAMED
+            </h1>
+            <p className="text-lg md:text-xl font-semibold animate-fade-in-delay-2 text-orange-300 tracking-wide">
+              [noewester]
+            </p>
+          </div>
         </div>
       )}
       
