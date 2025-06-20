@@ -64,18 +64,18 @@ export default function Portfolio() {
       
       {/* Welcome Message */}
       {showWelcome && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="text-center text-white px-8">
-            <h1 className="text-3xl md:text-5xl font-bold mb-2 animate-fade-in tracking-wider">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+          <div className="text-center px-8">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2 animate-fade-in tracking-wider text-white/80 font-aloja drop-shadow-md">
               WELCOME TO THE
             </h1>
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 animate-fade-in tracking-wider">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 animate-fade-in tracking-wider text-white/80 font-aloja drop-shadow-md">
               PORTFOLIO OF
             </h2>
-            <h1 className="text-4xl md:text-6xl font-black mb-2 animate-fade-in-delay text-orange-400 tracking-widest">
+            <h1 className="text-4xl md:text-6xl font-black mb-2 animate-fade-in-delay text-white/90 tracking-widest drop-shadow-lg font-noewester">
               S AASIL AHAMED
             </h1>
-            <p className="text-lg md:text-xl font-semibold animate-fade-in-delay-2 text-orange-300 tracking-wide">
+            <p className="text-lg md:text-xl font-semibold animate-fade-in-delay-2 text-white/70 tracking-wide font-noewester">
               [noewester]
             </p>
           </div>
