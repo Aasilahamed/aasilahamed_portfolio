@@ -10,16 +10,9 @@ export default function BedroomScene() {
   const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    setVideoLoaded(false);
-    // Set standard video dimensions for positioning calculations
+    // Set standard video dimensions for positioning calculations immediately
     setVideoDimensions({ width: 1920, height: 1080 });
-    
-    // Set a timeout to show hotspots after video starts playing
-    const timer = setTimeout(() => {
-      setVideoLoaded(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    setVideoLoaded(true);
   }, [isDarkMode]);
 
   const getResponsivePosition = (x: number, y: number) => {
@@ -55,15 +48,7 @@ export default function BedroomScene() {
         Your browser does not support the video tag.
       </video>
       
-      {/* Loading indicator */}
-      {!videoLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-background">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-muted-foreground">Loading bedroom scene...</p>
-          </div>
-        </div>
-      )}
+
       
       {/* Dark Mode Toggle */}
       <button
@@ -79,7 +64,7 @@ export default function BedroomScene() {
         <>
           {/* Laptop screen - Projects */}
           <Hotspot
-            position={getResponsivePosition(380, 190)}
+            position={getResponsivePosition(400, 215)}
             size="large"
             icon="fas fa-laptop"
             label="Projects"
@@ -89,7 +74,7 @@ export default function BedroomScene() {
           
           {/* Wall frame above desk - Certificates */}
           <Hotspot
-            position={getResponsivePosition(320, 100)}
+            position={getResponsivePosition(355, 125)}
             size="medium"
             icon="fas fa-certificate"
             label="Certificates"
@@ -99,7 +84,7 @@ export default function BedroomScene() {
           
           {/* Cat sleeping on rug - Fun Facts */}
           <Hotspot
-            position={getResponsivePosition(450, 270)}
+            position={getResponsivePosition(480, 285)}
             size="small"
             icon="fas fa-cat"
             label="Fun Facts"
@@ -109,7 +94,7 @@ export default function BedroomScene() {
           
           {/* Bookshelf on left - Skills */}
           <Hotspot
-            position={getResponsivePosition(180, 140)}
+            position={getResponsivePosition(150, 195)}
             size="medium"
             icon="fas fa-book"
             label="Skills"
@@ -119,7 +104,7 @@ export default function BedroomScene() {
           
           {/* Bed with pillows - About Me */}
           <Hotspot
-            position={getResponsivePosition(120, 180)}
+            position={getResponsivePosition(120, 175)}
             size="large"
             icon="fas fa-user"
             label="About Me"
@@ -129,7 +114,7 @@ export default function BedroomScene() {
           
           {/* Balcony area with plants - Contact */}
           <Hotspot
-            position={getResponsivePosition(680, 160)}
+            position={getResponsivePosition(720, 185)}
             size="medium"
             icon="fas fa-envelope"
             label="Contact"
@@ -139,7 +124,7 @@ export default function BedroomScene() {
           
           {/* Desk with papers - Resume */}
           <Hotspot
-            position={getResponsivePosition(360, 220)}
+            position={getResponsivePosition(350, 245)}
             size="small"
             icon="fas fa-file-pdf"
             label="Resume"
@@ -147,9 +132,9 @@ export default function BedroomScene() {
             onClick={() => openModal("resume")}
           />
           
-          {/* Hanging plants - Hobbies */}
+          {/* Plants area - Hobbies */}
           <Hotspot
-            position={getResponsivePosition(520, 80)}
+            position={getResponsivePosition(590, 195)}
             size="small"
             icon="fas fa-seedling"
             label="Hobbies"
