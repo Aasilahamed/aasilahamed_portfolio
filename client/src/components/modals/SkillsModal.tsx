@@ -12,33 +12,33 @@ interface Skill {
 
 const skills: Skill[] = [
   // Frontend
-  { name: "React", level: 95, icon: "fab fa-react", category: "Frontend" },
-  { name: "TypeScript", level: 90, icon: "fas fa-code", category: "Frontend" },
-  { name: "Vue.js", level: 85, icon: "fab fa-vuejs", category: "Frontend" },
-  { name: "HTML/CSS", level: 95, icon: "fab fa-html5", category: "Frontend" },
-  { name: "Tailwind CSS", level: 90, icon: "fas fa-palette", category: "Frontend" },
+  { name: "React.js", level: 85, icon: "fab fa-react", category: "Frontend" },
+  { name: "JavaScript", level: 90, icon: "fab fa-js-square", category: "Frontend" },
+  { name: "HTML", level: 95, icon: "fab fa-html5", category: "Frontend" },
+  { name: "CSS", level: 90, icon: "fab fa-css3-alt", category: "Frontend" },
+  { name: "Tailwind CSS", level: 85, icon: "fas fa-palette", category: "Frontend" },
   
   // Backend
-  { name: "Node.js", level: 90, icon: "fab fa-node-js", category: "Backend" },
-  { name: "Express.js", level: 85, icon: "fas fa-server", category: "Backend" },
-  { name: "Python", level: 80, icon: "fab fa-python", category: "Backend" },
-  { name: "PostgreSQL", level: 85, icon: "fas fa-database", category: "Backend" },
-  { name: "MongoDB", level: 80, icon: "fas fa-leaf", category: "Backend" },
+  { name: "Node.js", level: 80, icon: "fab fa-node-js", category: "Backend" },
+  { name: "Python", level: 90, icon: "fab fa-python", category: "Backend" },
+  { name: "MongoDB", level: 75, icon: "fas fa-leaf", category: "Backend" },
+  { name: "MySQL", level: 80, icon: "fas fa-database", category: "Backend" },
+  { name: "Firebase", level: 75, icon: "fas fa-fire", category: "Backend" },
   
-  // Cloud & DevOps
-  { name: "AWS", level: 85, icon: "fab fa-aws", category: "Cloud" },
-  { name: "Docker", level: 80, icon: "fab fa-docker", category: "Cloud" },
-  { name: "Kubernetes", level: 75, icon: "fas fa-dharmachakra", category: "Cloud" },
-  { name: "Git", level: 95, icon: "fab fa-git-alt", category: "Tools" },
-  { name: "CI/CD", level: 80, icon: "fas fa-sync", category: "Cloud" },
+  // AI & Tools
+  { name: "Machine Learning", level: 85, icon: "fas fa-brain", category: "AI/ML" },
+  { name: "Artificial Intelligence", level: 80, icon: "fas fa-robot", category: "AI/ML" },
+  { name: "N8N", level: 70, icon: "fas fa-network-wired", category: "Tools" },
+  { name: "Git", level: 85, icon: "fab fa-git-alt", category: "Tools" },
+  { name: "GitHub", level: 85, icon: "fab fa-github", category: "Tools" },
   
-  // Tools
-  { name: "VS Code", level: 95, icon: "fas fa-code", category: "Tools" },
-  { name: "Figma", level: 75, icon: "fab fa-figma", category: "Tools" },
-  { name: "Postman", level: 85, icon: "fas fa-paper-plane", category: "Tools" }
+  // Design
+  { name: "UI/UX Design", level: 80, icon: "fas fa-paint-brush", category: "Design" },
+  { name: "Figma", level: 85, icon: "fab fa-figma", category: "Design" },
+  { name: "Canva", level: 75, icon: "fas fa-image", category: "Design" }
 ];
 
-const categories = ["Frontend", "Backend", "Cloud", "Tools"];
+const categories = ["Frontend", "Backend", "AI/ML", "Tools", "Design"];
 
 export default function SkillsModal({ isOpen, onClose }: SkillsModalProps) {
   if (!isOpen) return null;

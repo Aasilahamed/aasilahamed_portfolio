@@ -104,6 +104,18 @@ This is an interactive portfolio website featuring a cozy bedroom scene with cli
 ```
 Changelog:
 - June 20, 2025. Initial setup
+- June 20, 2025. Updated all portfolio content with Aasil Ahamed's actual resume details:
+  * Updated About Me with career objective and achievements
+  * Updated Skills with actual technical skills (Python, JavaScript, React.js, etc.)
+  * Updated Projects with real projects (AI FIR Assistant, Anzoro, Cognitive Firewall)
+  * Updated Certificates with actual certifications from Infosys Springboard, Great Learning
+  * Updated Contact with real contact information
+  * Updated Hobbies with actual interests (Exploring, UI Designing, Photography, Cooking)
+  * Updated Fun Facts with real achievements (UNESCO finalist, hackathon organizer)
+  * Created downloadable resume with complete details
+  * Fixed welcome title styling with Kalam font
+  * Made hotspots more transparent (10% opacity)
+  * Added smooth video transitions between day/night modes
 ```
 
 ## User Preferences

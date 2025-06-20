@@ -7,10 +7,74 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   if (!isOpen) return null;
 
   const handleDownload = () => {
-    // Create a dummy PDF download
+    // Create downloadable resume content
+    const resumeContent = `
+AASIL AHAMED S
+B.Sc. Artificial Intelligence and Machine Learning Student | Full-Stack Developer | Event Organizer
+
+Contact Information:
+Phone: +91 9843743705
+Email: saasilahamed123@gmail.com
+Location: Coimbatore, Tamil Nadu
+LinkedIn: linkedin.com/in/s-aasil-ahamed
+
+Career Objective:
+A passionate B.Sc. Artificial Intelligence and Machine Learning student with a strong interest in full-stack development and a knack for organizing events and building connections. I aim to contribute to innovative tech teams where I can apply and grow my development skills, take initiative, and collaborate effectively—while also creating meaningful experiences through community engagement and leadership.
+
+Technical Skills:
+Python | JavaScript | HTML | CSS | React.js | Node.js | MongoDB | MySQL | Tailwind CSS | Git | GitHub | Figma | Canva | UI/UX Design | Firebase | N8N
+
+Education:
+B.Sc. Artificial Intelligence and Machine Learning
+Rathinam College of Arts and Science | 2023 - 2026 | CGPA: 7.94
+
+HSC | Nirmala Matha Convent Hr Sec School | 2022 | 74.6%
+SSLC | Nirmala Matha Convent Hr Sec School | 2020 | 91.4%
+
+Internship:
+Web Scraping Intern | Data Pattern | Coimbatore | 2023
+- Completed a 2-month internship focused on web scraping and data collection
+- Developed Python scripts using libraries like BeautifulSoup and Requests to extract data from websites
+
+Projects:
+1. AI-Powered FIR Assistant
+   - An AI-based chatbot system that helps users file First Information Reports using natural language processing
+   - Integrated voice-to-text and real-time response capabilities for ease of use
+
+2. Anzoro – Professional Networking Platform
+   - An NFC-powered networking platform that lets users create digital profiles and order custom-designed NFC cards
+   - Includes React-based frontend, dynamic dashboard, and profile builder workflow
+
+3. Cognitive Firewall: AI-Based Scam & Manipulation Detection
+   - Cognitive Firewall is a browser-based, real-time text analysis tool designed to identify emotionally manipulative and scam-related messages
+
+Certifications:
+- Network Topologies & Technologies – Infosys Springboard
+- Basics of Python – Infosys Springboard  
+- Soft Skills for IT – Great Learning Academy
+- Introduction to Web Development – LeadPro Infotech
+
+Achievements:
+- Finalist in UNESCO Ocean Literacy Program
+- Lead Organizer of "Hack Beyond Limits!" – a National-Level 24-Hour Hackathon hosted at Rathinam College
+- Conducted tech workshops on UI/UX and Figma basics for the student community
+- Volunteered at the Mega Placement Opportunity organized by Tamil Nadu Government with Rathinam College
+
+Soft Skills:
+Effective Communication | Problem Solving | Time Management | Leadership | Event Management | Public Speaking | Team Collaboration
+
+Hobbies:
+Exploring | UI Designing | Photography | Cooking
+
+Languages:
+English/Tamil - Speak, Read, Write
+Malayalam - Speak
+    `;
+    
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
     const link = document.createElement('a');
-    link.href = 'data:application/pdf;base64,JVBERi0xLjMKJcfsu...'; // This would be your actual PDF data
-    link.download = 'John_Doe_Resume.pdf';
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Aasil_Ahamed_Resume.txt';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -44,12 +108,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         <div className="space-y-6">
           {/* Header Section */}
           <div className="text-center border-b border-border pb-6">
-            <h3 className="text-2xl font-bold mb-2">John Doe</h3>
-            <p className="text-lg text-primary mb-2">Full Stack Developer</p>
+            <h3 className="text-2xl font-bold mb-2">AASIL AHAMED S</h3>
+            <p className="text-lg text-primary mb-2">B.Sc. AI & ML Student | Full-Stack Developer | Event Organizer</p>
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
-              <span><i className="fas fa-envelope mr-1"></i> hello@example.com</span>
-              <span><i className="fas fa-phone mr-1"></i> +1 (234) 567-890</span>
-              <span><i className="fas fa-map-marker-alt mr-1"></i> San Francisco, CA</span>
+              <span><i className="fas fa-envelope mr-1"></i> saasilahamed123@gmail.com</span>
+              <span><i className="fas fa-phone mr-1"></i> +91 9843743705</span>
+              <span><i className="fas fa-map-marker-alt mr-1"></i> Coimbatore, Tamil Nadu</span>
             </div>
           </div>
           

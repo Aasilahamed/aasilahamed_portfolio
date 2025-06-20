@@ -70,21 +70,21 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             
             <div className="flex items-center gap-3">
               <i className="fas fa-envelope text-primary"></i>
-              <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                hello@example.com
+              <a href="mailto:saasilahamed123@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                saasilahamed123@gmail.com
               </a>
             </div>
             
             <div className="flex items-center gap-3">
               <i className="fas fa-phone text-primary"></i>
-              <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                +1 (234) 567-890
+              <a href="tel:+919843743705" className="text-muted-foreground hover:text-primary transition-colors">
+                +91 9843743705
               </a>
             </div>
             
             <div className="flex items-center gap-3">
               <i className="fas fa-map-marker-alt text-primary"></i>
-              <span className="text-muted-foreground">San Francisco, CA</span>
+              <span className="text-muted-foreground">Coimbatore, Tamil Nadu</span>
             </div>
             
             {/* Social Links */}
@@ -92,7 +92,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <h4 className="font-semibold mb-3">Connect With Me</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://linkedin.com/in/username"
+                  href="https://linkedin.com/in/s-aasil-ahamed"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-muted-foreground hover:text-primary transition-colors"
@@ -100,20 +100,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <i className="fab fa-linkedin"></i>
                 </a>
                 <a
-                  href="https://github.com/username"
+                  href="https://github.com/saasilahamed"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-muted-foreground hover:text-primary transition-colors"
                 >
                   <i className="fab fa-github"></i>
-                </a>
-                <a
-                  href="https://twitter.com/username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-2xl text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <i className="fab fa-twitter"></i>
                 </a>
                 <a
                   href="https://medium.com/@username"

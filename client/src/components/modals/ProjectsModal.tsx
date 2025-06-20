@@ -18,30 +18,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, order management, and admin dashboard.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    github: "https://github.com/username/ecommerce-platform",
-    demo: "https://ecommerce-demo.com",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%234F46E5'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Crect x='70' y='70' width='260' height='30' fill='%23E5E7EB'/%3E%3Crect x='70' y='120' width='120' height='80' fill='%23F3F4F6'/%3E%3Crect x='210' y='120' width='120' height='80' fill='%23F3F4F6'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='20' font-weight='bold'%3EE-Commerce%3C/text%3E%3C/svg%3E"
+    title: "AI-Powered FIR Assistant",
+    description: "An AI-based chatbot system that helps users file First Information Reports using natural language processing. Integrated voice-to-text and real-time response capabilities for ease of use.",
+    technologies: ["Python", "Natural Language Processing", "Voice-to-Text", "AI", "Chatbot"],
+    github: "https://github.com/saasilahamed/fir-assistant",
+    demo: "https://fir-assistant-demo.com",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%234F46E5'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='150' cy='130' r='20' fill='%234F46E5'/%3E%3Crect x='190' y='110' width='100' height='40' fill='%23E5E7EB' rx='20'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='16' font-weight='bold'%3EAI FIR Assistant%3C/text%3E%3C/svg%3E"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built with React and Socket.io.",
-    technologies: ["React", "Socket.io", "Express", "MongoDB", "Framer Motion"],
-    github: "https://github.com/username/task-manager",
-    demo: "https://taskmanager-demo.com",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2310B981'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Crect x='70' y='70' width='80' height='160' fill='%23EF4444' rx='5'/%3E%3Crect x='160' y='70' width='80' height='160' fill='%23F59E0B' rx='5'/%3E%3Crect x='250' y='70' width='80' height='160' fill='%2310B981' rx='5'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='18' font-weight='bold'%3ETask Manager%3C/text%3E%3C/svg%3E"
+    title: "Anzoro – Professional Networking Platform",
+    description: "An NFC-powered networking platform that lets users create digital profiles and order custom-designed NFC cards. Includes React-based frontend, dynamic dashboard, and profile builder workflow.",
+    technologies: ["React.js", "NFC Technology", "Digital Profiles", "Dashboard", "Profile Builder"],
+    github: "https://github.com/saasilahamed/anzoro",
+    demo: "https://anzoro-demo.com",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2310B981'/%3E%3Crect x='50' y='80' width='120' height='80' fill='%23FFF' rx='10'/%3E%3Crect x='230' y='80' width='120' height='80' fill='%23FFF' rx='10'/%3E%3Cpath d='M170 120 L230 120' stroke='%23FFF' stroke-width='3'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='18' font-weight='bold'%3EAnzoro%3C/text%3E%3C/svg%3E"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that displays current weather and forecasts for multiple cities. Features include location-based weather, search functionality, and weather maps.",
-    technologies: ["Vue.js", "TypeScript", "Chart.js", "OpenWeather API", "SCSS"],
-    github: "https://github.com/username/weather-dashboard",
-    demo: "https://weather-demo.com",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2306B6D4'/%3E%3Ccircle cx='200' cy='100' r='30' fill='%23FCD34D'/%3E%3Cpath d='M100 150 Q150 130 200 150 Q250 170 300 150' fill='none' stroke='%23FFF' stroke-width='5'/%3E%3Cpath d='M120 180 Q170 160 220 180 Q270 200 320 180' fill='none' stroke='%23FFF' stroke-width='3'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='18' font-weight='bold'%3EWeather App%3C/text%3E%3C/svg%3E"
+    title: "Cognitive Firewall: AI-Based Scam Detection",
+    description: "Cognitive Firewall is a browser-based, real-time text analysis tool designed to identify emotionally manipulative and scam-related messages using AI algorithms.",
+    technologies: ["AI", "Text Analysis", "Browser Extension", "Scam Detection", "Real-time Processing"],
+    github: "https://github.com/saasilahamed/cognitive-firewall",
+    demo: "https://cognitive-firewall-demo.com",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23EF4444'/%3E%3Cpath d='M200 80 L160 120 L200 160 L240 120 Z' fill='%23FFF'/%3E%3Crect x='190' y='100' width='20' height='40' fill='%23EF4444'/%3E%3Ccircle cx='200' cy='190' r='30' fill='%23FFF'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='16' font-weight='bold'%3ECognitive Firewall%3C/text%3E%3C/svg%3E"
   }
 ];
 

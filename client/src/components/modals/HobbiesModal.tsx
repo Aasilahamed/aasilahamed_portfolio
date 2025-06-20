@@ -5,46 +5,32 @@ interface HobbiesModalProps {
 
 const hobbies = [
   {
-    title: "Photography",
-    icon: "fas fa-camera",
-    description: "Capturing moments and landscapes during my travels",
-    images: ["nature", "urban", "portraits"],
+    title: "Exploring",
+    icon: "fas fa-compass",
+    description: "Love discovering new places, cultures, and experiences. Always eager to learn about different perspectives and environments.",
+    images: ["travel", "adventure", "discovery"],
+    level: "Passionate"
+  },
+  {
+    title: "UI Designing",
+    icon: "fas fa-paint-brush",
+    description: "Creating intuitive and visually appealing user interfaces. Passionate about user experience and modern design principles.",
+    images: ["wireframes", "prototypes", "mockups"],
     level: "Advanced"
   },
   {
-    title: "Rock Climbing",
-    icon: "fas fa-mountain",
-    description: "Indoor and outdoor climbing, working on my first 5.12 route",
-    images: ["climbing", "bouldering"],
+    title: "Photography",
+    icon: "fas fa-camera",
+    description: "Capturing moments, landscapes, and creative compositions. Love experimenting with different styles and techniques.",
+    images: ["nature", "portraits", "events"],
     level: "Intermediate"
   },
   {
     title: "Cooking",
     icon: "fas fa-utensils",
-    description: "Exploring international cuisines, specializing in Asian fusion",
-    images: ["sushi", "pasta", "desserts"],
+    description: "Experimenting with different cuisines and creating delicious meals. Enjoy the creative process and sharing food with others.",
+    images: ["recipes", "ingredients", "plating"],
     level: "Intermediate"
-  },
-  {
-    title: "Board Games",
-    icon: "fas fa-dice",
-    description: "Strategy games enthusiast, own 50+ board games",
-    images: ["strategy", "party", "cooperative"],
-    level: "Expert"
-  },
-  {
-    title: "Guitar",
-    icon: "fas fa-guitar",
-    description: "Playing for 8 years, mainly acoustic and classical styles",
-    images: ["acoustic", "classical"],
-    level: "Advanced"
-  },
-  {
-    title: "Gardening",
-    icon: "fas fa-seedling",
-    description: "Growing herbs, vegetables, and succulents on my balcony",
-    images: ["herbs", "vegetables", "succulents"],
-    level: "Beginner"
   }
 ];
 

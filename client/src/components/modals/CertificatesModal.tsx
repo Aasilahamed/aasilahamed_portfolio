@@ -18,39 +18,35 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: 1,
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "March 2024",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23FF9900'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%23232F3E' font-size='16' font-weight='bold'%3EAWS Certified%3C/text%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%23232F3E' font-size='14'%3ESolutions Architect%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23FF9900' font-size='12'%3EAssociate Level%3C/text%3E%3Crect x='80' y='180' width='240' height='2' fill='%23FF9900'/%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%23232F3E' font-size='12'%3EMarch 2024%3C/text%3E%3C/svg%3E",
-    credentialId: "AWS-SAA-123456",
-    verifyUrl: "https://aws.amazon.com/certification/verify"
+    title: "Network Topologies & Technologies",
+    issuer: "Infosys Springboard",
+    date: "2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23007ACC'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='150' cy='120' r='15' fill='%23007ACC'/%3E%3Ccircle cx='250' cy='120' r='15' fill='%23007ACC'/%3E%3Cline x1='165' y1='120' x2='235' y2='120' stroke='%23007ACC' stroke-width='2'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23007ACC' font-size='14' font-weight='bold'%3ENetwork Topologies%3C/text%3E%3Ctext x='200' y='180' text-anchor='middle' fill='%23007ACC' font-size='12'%3E%26 Technologies%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%23007ACC' font-size='12'%3EInfosys Springboard%3C/text%3E%3C/svg%3E",
+    credentialId: "INFOSYS-NT-2023"
   },
   {
     id: 2,
-    title: "Google Cloud Professional Developer",
-    issuer: "Google Cloud",
-    date: "January 2024",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%234285F4'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%234285F4' font-size='16' font-weight='bold'%3EGoogle Cloud%3C/text%3E%3Ctext x='200' y='130' text-anchor='middle' fill='%234285F4' font-size='14'%3EProfessional%3C/text%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%234285F4' font-size='14'%3ECloud Developer%3C/text%3E%3Crect x='80' y='170' width='240' height='2' fill='%23EA4335'/%3E%3Ctext x='200' y='200' text-anchor='middle' fill='%234285F4' font-size='12'%3EJanuary 2024%3C/text%3E%3C/svg%3E",
-    credentialId: "GCP-PCD-789012",
-    verifyUrl: "https://cloud.google.com/certification/verify"
+    title: "Basics of Python",
+    issuer: "Infosys Springboard",
+    date: "2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233776AB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Cpath d='M180 100 Q190 90 200 100 Q210 110 220 100' fill='none' stroke='%233776AB' stroke-width='3'/%3E%3Ccircle cx='190' cy='120' r='8' fill='%23FFD43B'/%3E%3Ccircle cx='210' cy='120' r='8' fill='%233776AB'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%233776AB' font-size='16' font-weight='bold'%3EPython Basics%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%233776AB' font-size='12'%3EInfosys Springboard%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%233776AB' font-size='12'%3E2023%3C/text%3E%3C/svg%3E",
+    credentialId: "INFOSYS-PY-2023"
   },
   {
     id: 3,
-    title: "React Developer Certification",
-    issuer: "Meta",
-    date: "November 2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2361DAFB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='200' cy='120' r='20' fill='%2361DAFB'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2' transform='rotate(60 200 120)'/%3E%3Cellipse cx='200' cy='120' rx='50' ry='15' fill='none' stroke='%2361DAFB' stroke-width='2' transform='rotate(-60 200 120)'/%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%2361DAFB' font-size='16' font-weight='bold'%3EReact Developer%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%2361DAFB' font-size='14'%3ECertified by Meta%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%2361DAFB' font-size='12'%3ENovember 2023%3C/text%3E%3C/svg%3E",
-    credentialId: "META-RDC-345678",
-    verifyUrl: "https://developers.facebook.com/certification/verify"
+    title: "Soft Skills for IT",
+    issuer: "Great Learning Academy",
+    date: "2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23FF6B35'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='180' cy='110' r='12' fill='%23FF6B35'/%3E%3Ccircle cx='220' cy='110' r='12' fill='%23FF6B35'/%3E%3Cpath d='M170 130 Q200 140 230 130' fill='none' stroke='%23FF6B35' stroke-width='2'/%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%23FF6B35' font-size='14' font-weight='bold'%3ESoft Skills for IT%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%23FF6B35' font-size='12'%3EGreat Learning Academy%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%23FF6B35' font-size='12'%3E2023%3C/text%3E%3C/svg%3E",
+    credentialId: "GLA-SS-2023"
   },
   {
     id: 4,
-    title: "Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    date: "September 2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23326CE5'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Cpath d='M200 80 L180 100 L200 120 L220 100 Z' fill='%23326CE5'/%3E%3Ccircle cx='200' cy='100' r='15' fill='none' stroke='%23326CE5' stroke-width='2'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23326CE5' font-size='16' font-weight='bold'%3EKubernetes%3C/text%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%23326CE5' font-size='14'%3EAdministrator%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%23326CE5' font-size='12'%3E(CKA)%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%23326CE5' font-size='12'%3ESeptember 2023%3C/text%3E%3C/svg%3E",
-    credentialId: "CNCF-CKA-901234",
-    verifyUrl: "https://training.linuxfoundation.org/certification/verify"
+    title: "Introduction to Web Development",
+    issuer: "LeadPro Infotech",
+    date: "2023",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2361DAFB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Crect x='80' y='80' width='240' height='140' fill='%23F8F9FA' rx='5'/%3E%3Crect x='90' y='90' width='220' height='20' fill='%2361DAFB'/%3E%3Crect x='90' y='120' width='100' height='60' fill='%23E9ECEF'/%3E%3Crect x='200' y='120' width='110' height='60' fill='%23E9ECEF'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='14' font-weight='bold'%3EWeb Development%3C/text%3E%3Ctext x='200' y='240' text-anchor='middle' fill='%2361DAFB' font-size='12'%3ELeadPro Infotech%3C/text%3E%3C/svg%3E",
+    credentialId: "LEADPRO-WD-2023"
   }
 ];
 

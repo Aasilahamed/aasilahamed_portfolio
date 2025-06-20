@@ -5,44 +5,44 @@ interface FunFactsModalProps {
 
 const funFacts = [
   {
-    icon: "fas fa-coffee",
-    title: "Coffee Addict",
-    description: "I drink an average of 4 cups of coffee per day. My favorite is a double shot espresso!"
+    icon: "fas fa-trophy",
+    title: "UNESCO Finalist",
+    description: "Proud to be a finalist in the UNESCO Ocean Literacy Program, contributing to global environmental awareness!"
   },
   {
-    icon: "fas fa-cat",
-    title: "Cat Person",
-    description: "I have two cats named Pixel and Debug. They're excellent code reviewers (they sit on my keyboard)."
+    icon: "fas fa-users",
+    title: "Hackathon Organizer",
+    description: "Lead organizer of 'Hack Beyond Limits!' - a National-Level 24-Hour Hackathon that brought together top tech talent across India."
   },
   {
-    icon: "fas fa-music",
-    title: "Music Producer",
-    description: "In my spare time, I produce electronic music. I've released 3 albums on Spotify!"
-  },
-  {
-    icon: "fas fa-mountain",
-    title: "Adventure Seeker",
-    description: "I've hiked over 50 trails in California and plan to visit all national parks in the US."
-  },
-  {
-    icon: "fas fa-gamepad",
-    title: "Retro Gamer",
-    description: "I collect vintage gaming consoles. My prized possession is a working Atari 2600 from 1977."
+    icon: "fas fa-chalkboard-teacher",
+    title: "Tech Workshop Conductor",
+    description: "I love sharing knowledge! I've conducted workshops on UI/UX design and Figma basics for the student community."
   },
   {
     icon: "fas fa-language",
-    title: "Polyglot",
-    description: "I speak 4 languages: English, Spanish, Japanese, and Python (does that count?)."
+    title: "Multilingual",
+    description: "I speak three languages: English, Tamil (native), and Malayalam. Each language opens up new cultural perspectives!"
   },
   {
-    icon: "fas fa-book",
-    title: "Bookworm",
-    description: "I read 52 books last year! My favorite genres are sci-fi, fantasy, and tech biographies."
+    icon: "fas fa-brain",
+    title: "AI Enthusiast",
+    description: "Currently pursuing B.Sc. in AI & ML with a CGPA of 7.94. Fascinated by the potential of artificial intelligence to solve real-world problems."
   },
   {
-    icon: "fas fa-seedling",
-    title: "Plant Parent",
-    description: "I have 23 plants in my apartment. My fiddle leaf fig, Frank, is almost 6 feet tall!"
+    icon: "fas fa-handshake",
+    title: "Community Volunteer",
+    description: "Volunteered at the Mega Placement Opportunity organized by Tamil Nadu Government, helping connect students with career opportunities."
+  },
+  {
+    icon: "fas fa-camera",
+    title: "Creative Explorer",
+    description: "Photography and UI design are my creative outlets. I love capturing moments and designing intuitive user experiences."
+  },
+  {
+    icon: "fas fa-utensils",
+    title: "Cooking Experimenter",
+    description: "Love experimenting with different cuisines and creating delicious meals. Cooking is my stress-relief activity!"
   }
 ];
 

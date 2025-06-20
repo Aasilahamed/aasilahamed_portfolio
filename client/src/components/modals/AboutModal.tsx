@@ -38,29 +38,31 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <i className="fas fa-user text-3xl text-primary"></i>
             </div>
             <div>
-              <h3 className="text-xl font-bold">Full Stack Developer</h3>
-              <p className="text-muted-foreground">Passionate about creating amazing digital experiences</p>
+              <h3 className="text-xl font-bold">AASIL AHAMED S</h3>
+              <p className="text-muted-foreground">B.Sc. AI & ML Student | Full-Stack Developer | Event Organizer</p>
             </div>
           </div>
           
           {/* Bio */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">My Story</h4>
+            <h4 className="text-lg font-semibold mb-3">Career Objective</h4>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Hello! I'm a passionate full-stack developer with over 5 years of experience building 
-                web applications and digital solutions. My journey started with curiosity about how 
-                websites work, and it has evolved into a career dedicated to crafting exceptional 
-                user experiences and robust backend systems.
+                A passionate B.Sc. Artificial Intelligence and Machine Learning student with a strong interest 
+                in full-stack development and a knack for organizing events and building connections. I aim to 
+                contribute to innovative tech teams where I can apply and grow my development skills, take 
+                initiative, and collaborate effectively—while also creating meaningful experiences through 
+                community engagement and leadership.
               </p>
               <p>
-                I specialize in modern JavaScript frameworks, cloud technologies, and DevOps practices. 
-                I love working with React, Node.js, and various cloud platforms to build scalable 
-                applications that solve real-world problems.
+                Currently pursuing my degree at Rathinam College of Arts and Science, I have hands-on experience 
+                in web development, AI technologies, and event management. I've successfully organized national-level 
+                hackathons and developed AI-powered applications that solve real-world problems.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community through blog posts and talks.
+                When I'm not coding, you'll find me exploring new technologies, designing UI/UX interfaces, 
+                photography, or cooking. I believe in continuous learning and sharing knowledge with the 
+                tech community through workshops and mentoring.
               </p>
             </div>
           </div>
@@ -71,19 +73,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
                 <i className="fas fa-map-marker-alt text-primary"></i>
-                <span>Based in San Francisco, CA</span>
+                <span>Based in Coimbatore, Tamil Nadu</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-graduation-cap text-primary"></i>
-                <span>Computer Science Degree</span>
+                <span>B.Sc. AI & ML (2023-2026)</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-briefcase text-primary"></i>
-                <span>5+ Years Experience</span>
+                <span>Web Scraping Intern at Data Pattern</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-heart text-primary"></i>
-                <span>Love Problem Solving</span>
+                <span>Love Event Management & AI</span>
               </div>
             </div>
           </div>
@@ -110,18 +112,26 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </div>
           </div>
           
-          {/* Current Focus */}
+          {/* Achievements */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">Currently Learning</h4>
-            <div className="flex flex-wrap gap-2">
-              {["Rust", "WebAssembly", "Machine Learning", "Blockchain", "AR/VR"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+            <h4 className="text-lg font-semibold mb-3">Key Achievements</h4>
+            <div className="space-y-2">
+              <div className="flex items-start gap-3">
+                <i className="fas fa-trophy text-primary mt-1"></i>
+                <span className="text-sm">Finalist in UNESCO Ocean Literacy Program</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <i className="fas fa-users text-primary mt-1"></i>
+                <span className="text-sm">Lead Organizer of "Hack Beyond Limits!" - National-Level 24-Hour Hackathon</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <i className="fas fa-chalkboard-teacher text-primary mt-1"></i>
+                <span className="text-sm">Conducted tech workshops on UI/UX and Figma basics</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <i className="fas fa-handshake text-primary mt-1"></i>
+                <span className="text-sm">Volunteered at Mega Placement Opportunity by Tamil Nadu Government</span>
+              </div>
             </div>
           </div>
         </div>
