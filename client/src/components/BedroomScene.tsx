@@ -10,8 +10,8 @@ export default function BedroomScene() {
   const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    // Set standard video dimensions for positioning calculations immediately
-    setVideoDimensions({ width: 1920, height: 1080 });
+    // Set video dimensions based on actual bedroom scene dimensions
+    setVideoDimensions({ width: 939, height: 478 });
     setVideoLoaded(true);
   }, [isDarkMode]);
 
@@ -32,21 +32,31 @@ export default function BedroomScene() {
 
   return (
     <div className="w-full h-full relative overflow-hidden">
-      {/* Background bedroom video */}
-      <video
-        className="w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        key={isDarkMode ? "night" : "day"}
-      >
-        <source 
-          src={isDarkMode ? "/bedroom-night.mp4" : "/bedroom-day.mp4"} 
-          type="video/mp4" 
-        />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background bedroom video with transition */}
+      <div className="relative w-full h-full">
+        <video
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            isDarkMode ? 'opacity-0' : 'opacity-100'
+          }`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/bedroom-day.mp4" type="video/mp4" />
+        </video>
+        <video
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            isDarkMode ? 'opacity-100' : 'opacity-0'
+          }`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/bedroom-night.mp4" type="video/mp4" />
+        </video>
+      </div>
       
 
       
@@ -64,7 +74,7 @@ export default function BedroomScene() {
         <>
           {/* Laptop screen - Projects */}
           <Hotspot
-            position={getResponsivePosition(385, 210)}
+            position={getResponsivePosition(380, 210)}
             size="medium"
             icon="fas fa-laptop"
             label="Projects"
@@ -74,7 +84,7 @@ export default function BedroomScene() {
           
           {/* Wall frame above desk - Certificates */}
           <Hotspot
-            position={getResponsivePosition(340, 115)}
+            position={getResponsivePosition(315, 115)}
             size="medium"
             icon="fas fa-certificate"
             label="Certificates"
@@ -84,7 +94,7 @@ export default function BedroomScene() {
           
           {/* Cat sleeping on rug - Fun Facts */}
           <Hotspot
-            position={getResponsivePosition(480, 280)}
+            position={getResponsivePosition(460, 350)}
             size="small"
             icon="fas fa-cat"
             label="Fun Facts"
@@ -94,7 +104,7 @@ export default function BedroomScene() {
           
           {/* Bed with pillows - About Me */}
           <Hotspot
-            position={getResponsivePosition(120, 180)}
+            position={getResponsivePosition(95, 190)}
             size="medium"
             icon="fas fa-user"
             label="About Me"
@@ -102,9 +112,9 @@ export default function BedroomScene() {
             onClick={() => openModal("about")}
           />
           
-          {/* Balcony area with plants - Contact */}
+          {/* Balcony/window area - Contact */}
           <Hotspot
-            position={getResponsivePosition(650, 180)}
+            position={getResponsivePosition(770, 190)}
             size="medium"
             icon="fas fa-envelope"
             label="Contact"
@@ -112,9 +122,9 @@ export default function BedroomScene() {
             onClick={() => openModal("contact")}
           />
           
-          {/* Plant pot - Hobbies */}
+          {/* Plant pot near desk - Hobbies */}
           <Hotspot
-            position={getResponsivePosition(320, 240)}
+            position={getResponsivePosition(300, 280)}
             size="small"
             icon="fas fa-seedling"
             label="Hobbies"
@@ -122,9 +132,9 @@ export default function BedroomScene() {
             onClick={() => openModal("hobbies")}
           />
           
-          {/* Resume/Skills - combining into one section */}
+          {/* Bookshelf - Skills */}
           <Hotspot
-            position={getResponsivePosition(180, 140)}
+            position={getResponsivePosition(150, 160)}
             size="medium"
             icon="fas fa-book"
             label="Skills"
@@ -132,9 +142,9 @@ export default function BedroomScene() {
             onClick={() => openModal("skills")}
           />
           
-          {/* Resume at desk papers */}
+          {/* Desk area - Resume */}
           <Hotspot
-            position={getResponsivePosition(420, 240)}
+            position={getResponsivePosition(420, 260)}
             size="small"
             icon="fas fa-file-pdf"
             label="Resume"
