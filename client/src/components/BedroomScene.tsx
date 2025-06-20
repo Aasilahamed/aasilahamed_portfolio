@@ -6,28 +6,28 @@ import { useTheme } from "../lib/stores/useTheme";
 export default function BedroomScene() {
   const { openModal } = usePortfolio();
   const { isDarkMode, toggleTheme } = useTheme();
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const img = new Image();
-    img.onload = () => {
-      console.log('Image loaded:', img.naturalWidth, img.naturalHeight);
-      setImageDimensions({ width: img.naturalWidth, height: img.naturalHeight });
-      setImageLoaded(true);
-    };
-    img.onerror = () => {
-      console.error('Failed to load bedroom image');
-    };
-    img.src = isDarkMode ? "/bedroom-scene-dark.png" : "/bedroom-scene.png";
+    setVideoLoaded(false);
+    // Set standard video dimensions for positioning calculations
+    setVideoDimensions({ width: 1920, height: 1080 });
+    
+    // Set a timeout to show hotspots after video starts playing
+    const timer = setTimeout(() => {
+      setVideoLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, [isDarkMode]);
 
   const getResponsivePosition = (x: number, y: number) => {
-    if (!imageLoaded) return { left: '50%', top: '50%' };
+    if (!videoLoaded) return { left: '50%', top: '50%' };
     
-    // Calculate percentage positions based on image dimensions
-    const leftPercent = (x / imageDimensions.width) * 100;
-    const topPercent = (y / imageDimensions.height) * 100;
+    // Calculate percentage positions based on video dimensions
+    const leftPercent = (x / videoDimensions.width) * 100;
+    const topPercent = (y / videoDimensions.height) * 100;
     
     return {
       left: `${leftPercent}%`,
@@ -35,20 +35,28 @@ export default function BedroomScene() {
     };
   };
 
-  console.log('BedroomScene render - imageLoaded:', imageLoaded, 'dimensions:', imageDimensions);
+  console.log('BedroomScene render - videoLoaded:', videoLoaded, 'dimensions:', videoDimensions);
 
   return (
     <div className="w-full h-full relative overflow-hidden">
-      {/* Background bedroom image */}
-      <div 
-        className="w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("${isDarkMode ? "/bedroom-scene-dark.png" : "/bedroom-scene.png"}")`
-        }}
-      />
+      {/* Background bedroom video */}
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        key={isDarkMode ? "night" : "day"}
+      >
+        <source 
+          src={isDarkMode ? "/bedroom-night.mp4" : "/bedroom-day.mp4"} 
+          type="video/mp4" 
+        />
+        Your browser does not support the video tag.
+      </video>
       
       {/* Loading indicator */}
-      {!imageLoaded && (
+      {!videoLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-background">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
@@ -67,7 +75,7 @@ export default function BedroomScene() {
       </button>
       
       {/* Interactive Hotspots */}
-      {imageLoaded && (
+      {videoLoaded && (
         <>
           {/* Laptop screen - Projects */}
           <Hotspot
