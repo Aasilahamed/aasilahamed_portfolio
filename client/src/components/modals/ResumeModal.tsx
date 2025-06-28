@@ -89,16 +89,16 @@ Malayalam - Speak
       />
       
       {/* Modal */}
-      <div className="relative bg-card text-card-foreground rounded-lg p-6 max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-border shadow-2xl">
+      <div className="relative bg-white/10 backdrop-blur-md text-white rounded-xl p-6 max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-white/20 shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <i className="fas fa-file-pdf text-2xl text-primary"></i>
-            <h2 className="text-2xl font-bold">Resume</h2>
+            <i className="fas fa-file-pdf text-2xl text-blue-400"></i>
+            <h2 className="text-2xl font-bold text-white">Resume</h2>
           </div>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="text-white/70 hover:text-white transition-colors p-2"
           >
             <i className="fas fa-times text-xl"></i>
           </button>

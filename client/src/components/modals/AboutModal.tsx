@@ -15,16 +15,16 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
       />
       
       {/* Modal */}
-      <div className="relative bg-card text-card-foreground rounded-lg p-6 max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-border shadow-2xl">
+      <div className="relative bg-white/10 backdrop-blur-md text-white rounded-xl p-6 max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-white/20 shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <i className="fas fa-user text-2xl text-primary"></i>
-            <h2 className="text-2xl font-bold">About Me</h2>
+            <i className="fas fa-user text-2xl text-blue-400"></i>
+            <h2 className="text-2xl font-bold text-white">About Me</h2>
           </div>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="text-white/70 hover:text-white transition-colors p-2"
           >
             <i className="fas fa-times text-xl"></i>
           </button>
@@ -34,19 +34,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         <div className="space-y-6">
           {/* Profile Section */}
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center">
-              <i className="fas fa-user text-3xl text-primary"></i>
+            <div className="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center">
+              <i className="fas fa-user text-3xl text-blue-400"></i>
             </div>
             <div>
-              <h3 className="text-xl font-bold">AASIL AHAMED S</h3>
-              <p className="text-muted-foreground">B.Sc. AI & ML Student | Full-Stack Developer | Event Organizer</p>
+              <h3 className="text-xl font-bold text-white">AASIL AHAMED S</h3>
+              <p className="text-white/70">B.Sc. AI & ML Student | Full-Stack Developer | Event Organizer</p>
             </div>
           </div>
           
           {/* Bio */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">Career Objective</h4>
-            <div className="space-y-4 text-muted-foreground">
+            <h4 className="text-lg font-semibold mb-3 text-white">Career Objective</h4>
+            <div className="space-y-4 text-white/80">
               <p>
                 A passionate B.Sc. Artificial Intelligence and Machine Learning student with a strong interest 
                 in full-stack development and a knack for organizing events and building connections. I aim to 

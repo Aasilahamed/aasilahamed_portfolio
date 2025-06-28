@@ -63,16 +63,16 @@ export default function SkillsModal({ isOpen, onClose }: SkillsModalProps) {
       />
       
       {/* Modal */}
-      <div className="relative bg-card text-card-foreground rounded-lg p-6 max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-border shadow-2xl">
+      <div className="relative bg-white/10 backdrop-blur-md text-white rounded-xl p-6 max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-white/20 shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <i className="fas fa-book text-2xl text-primary"></i>
-            <h2 className="text-2xl font-bold">Technical Skills</h2>
+            <i className="fas fa-book text-2xl text-blue-400"></i>
+            <h2 className="text-2xl font-bold text-white">Technical Skills</h2>
           </div>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="text-white/70 hover:text-white transition-colors p-2"
           >
             <i className="fas fa-times text-xl"></i>
           </button>
@@ -81,12 +81,12 @@ export default function SkillsModal({ isOpen, onClose }: SkillsModalProps) {
         {/* Skills by Category */}
         <div className="grid md:grid-cols-2 gap-6">
           {categories.map((category) => (
-            <div key={category} className="bg-muted rounded-lg p-4">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                {category === "Frontend" && <i className="fas fa-desktop text-primary"></i>}
-                {category === "Backend" && <i className="fas fa-server text-primary"></i>}
-                {category === "Cloud" && <i className="fas fa-cloud text-primary"></i>}
-                {category === "Tools" && <i className="fas fa-tools text-primary"></i>}
+            <div key={category} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-white">
+                {category === "Frontend" && <i className="fas fa-desktop text-blue-400"></i>}
+                {category === "Backend" && <i className="fas fa-server text-blue-400"></i>}
+                {category === "Cloud" && <i className="fas fa-cloud text-blue-400"></i>}
+                {category === "Tools" && <i className="fas fa-tools text-blue-400"></i>}
                 {category}
               </h3>
               
@@ -95,15 +95,15 @@ export default function SkillsModal({ isOpen, onClose }: SkillsModalProps) {
                   <div key={skill.name}>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <i className={`${skill.icon} text-primary`}></i>
-                        <span className="font-medium">{skill.name}</span>
+                        <i className={`${skill.icon} text-blue-400`}></i>
+                        <span className="font-medium text-white">{skill.name}</span>
                       </div>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                      <span className="text-sm text-white/70">{skill.level}%</span>
                     </div>
                     
-                    <div className="w-full bg-muted-foreground/20 rounded-full h-2">
+                    <div className="w-full bg-white/20 rounded-full h-2">
                       <div
-                        className={`h-2 rounded-full transition-all duration-1000 ${getSkillColor(skill.level)}`}
+                        className="bg-blue-400 h-2 rounded-full transition-all duration-700"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

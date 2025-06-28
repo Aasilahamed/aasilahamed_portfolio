@@ -59,16 +59,16 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
       />
       
       {/* Modal */}
-      <div className="relative bg-card text-card-foreground rounded-lg p-6 max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-border shadow-2xl">
+      <div className="relative bg-white/10 backdrop-blur-md text-white rounded-xl p-6 max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar modal-animate border border-white/20 shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <i className="fas fa-laptop text-2xl text-primary"></i>
-            <h2 className="text-2xl font-bold">Projects</h2>
+            <i className="fas fa-laptop text-2xl text-blue-400"></i>
+            <h2 className="text-2xl font-bold text-white">Projects</h2>
           </div>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            className="text-white/70 hover:text-white transition-colors p-2"
           >
             <i className="fas fa-times text-xl"></i>
           </button>
@@ -80,7 +80,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-muted rounded-lg overflow-hidden cursor-pointer transition-all hover:scale-105 hover:shadow-lg"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden cursor-pointer transition-all hover:scale-105 hover:shadow-lg"
                 onClick={() => setSelectedProject(project)}
               >
                 <img
@@ -89,8 +89,8 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                  <h3 className="font-semibold text-lg mb-2 text-white">{project.title}</h3>
+                  <p className="text-white/70 text-sm mb-3 line-clamp-2">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-1 mb-3">
