@@ -21,7 +21,7 @@ const certificates: Certificate[] = [
     title: "Network Topologies & Technologies",
     issuer: "Infosys Springboard",
     date: "2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23007ACC'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='150' cy='120' r='15' fill='%23007ACC'/%3E%3Ccircle cx='250' cy='120' r='15' fill='%23007ACC'/%3E%3Cline x1='165' y1='120' x2='235' y2='120' stroke='%23007ACC' stroke-width='2'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23007ACC' font-size='14' font-weight='bold'%3ENetwork Topologies%3C/text%3E%3Ctext x='200' y='180' text-anchor='middle' fill='%23007ACC' font-size='12'%3E%26 Technologies%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='%23007ACC' font-size='12'%3EInfosys Springboard%3C/text%3E%3C/svg%3E",
+    image: "/certificates/infosys-network.jpg", // Replace with your actual certificate image
     credentialId: "INFOSYS-NT-2023"
   },
   {
@@ -29,7 +29,7 @@ const certificates: Certificate[] = [
     title: "Basics of Python",
     issuer: "Infosys Springboard",
     date: "2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233776AB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Cpath d='M180 100 Q190 90 200 100 Q210 110 220 100' fill='none' stroke='%233776AB' stroke-width='3'/%3E%3Ccircle cx='190' cy='120' r='8' fill='%23FFD43B'/%3E%3Ccircle cx='210' cy='120' r='8' fill='%233776AB'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%233776AB' font-size='16' font-weight='bold'%3EPython Basics%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%233776AB' font-size='12'%3EInfosys Springboard%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%233776AB' font-size='12'%3E2023%3C/text%3E%3C/svg%3E",
+    image: "/certificates/infosys-python.jpg", // Replace with your actual certificate image
     credentialId: "INFOSYS-PY-2023"
   },
   {
@@ -37,7 +37,7 @@ const certificates: Certificate[] = [
     title: "Soft Skills for IT",
     issuer: "Great Learning Academy",
     date: "2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23FF6B35'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='180' cy='110' r='12' fill='%23FF6B35'/%3E%3Ccircle cx='220' cy='110' r='12' fill='%23FF6B35'/%3E%3Cpath d='M170 130 Q200 140 230 130' fill='none' stroke='%23FF6B35' stroke-width='2'/%3E%3Ctext x='200' y='170' text-anchor='middle' fill='%23FF6B35' font-size='14' font-weight='bold'%3ESoft Skills for IT%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%23FF6B35' font-size='12'%3EGreat Learning Academy%3C/text%3E%3Ctext x='200' y='210' text-anchor='middle' fill='%23FF6B35' font-size='12'%3E2023%3C/text%3E%3C/svg%3E",
+    image: "/certificates/greatlearning-softskills.jpg", // Replace with your actual certificate image
     credentialId: "GLA-SS-2023"
   },
   {
