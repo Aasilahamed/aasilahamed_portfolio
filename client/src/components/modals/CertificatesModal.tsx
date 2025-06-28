@@ -45,7 +45,7 @@ const certificates: Certificate[] = [
     title: "Introduction to Web Development",
     issuer: "LeadPro Infotech",
     date: "2023",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2361DAFB'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Crect x='80' y='80' width='240' height='140' fill='%23F8F9FA' rx='5'/%3E%3Crect x='90' y='90' width='220' height='20' fill='%2361DAFB'/%3E%3Crect x='90' y='120' width='100' height='60' fill='%23E9ECEF'/%3E%3Crect x='200' y='120' width='110' height='60' fill='%23E9ECEF'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='14' font-weight='bold'%3EWeb Development%3C/text%3E%3Ctext x='200' y='240' text-anchor='middle' fill='%2361DAFB' font-size='12'%3ELeadPro Infotech%3C/text%3E%3C/svg%3E",
+    image: "/certificates/leadpro-webdev.jpg", // Replace with your actual certificate image
     credentialId: "LEADPRO-WD-2023"
   }
 ];
