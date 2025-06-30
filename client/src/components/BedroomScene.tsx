@@ -3,7 +3,11 @@ import Hotspot from "./Hotspot";
 import { usePortfolio } from "../lib/stores/usePortfolio";
 import { useTheme } from "../lib/stores/useTheme";
 
-export default function BedroomScene() {
+interface BedroomSceneProps {
+  showWelcome: boolean;
+}
+
+export default function BedroomScene({ showWelcome }: BedroomSceneProps) {
   const { openModal } = usePortfolio();
   const { isDarkMode, toggleTheme } = useTheme();
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -60,17 +64,19 @@ export default function BedroomScene() {
       
 
       
-      {/* Dark Mode Toggle */}
-      <button
-        onClick={toggleTheme}
-        className="absolute top-4 right-4 z-30 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-      >
-        <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
-      </button>
+      {/* Dark Mode Toggle - Only show after welcome title fades */}
+      {!showWelcome && (
+        <button
+          onClick={toggleTheme}
+          className="absolute top-4 right-4 z-30 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 animate-fade-in"
+          aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
+        </button>
+      )}
       
-      {/* Interactive Hotspots */}
-      {videoLoaded && (
+      {/* Interactive Hotspots - Only show after welcome title fades */}
+      {videoLoaded && !showWelcome && (
         <>
           {/* Laptop screen - Projects */}
           <Hotspot

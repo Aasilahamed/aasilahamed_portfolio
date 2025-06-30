@@ -27,7 +27,7 @@ export default function Hotspot({ position, size, icon, label, description, onCl
 
   return (
     <div
-      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-20"
+      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-20 animate-hotspot-fade-in"
       style={{ left: position.left, top: position.top }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

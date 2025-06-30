@@ -27,7 +27,7 @@ export default function Portfolio() {
   return (
     <div className="w-full h-full relative">
       {/* Main bedroom scene */}
-      <BedroomScene />
+      <BedroomScene showWelcome={showWelcome} />
       
       {/* Modals */}
       {activeModal === "projects" && (
@@ -88,13 +88,15 @@ export default function Portfolio() {
         </div>
       )}
       
-      {/* Instructions */}
-      <div className="absolute bottom-4 right-4 z-10 bg-black/50 backdrop-blur-sm rounded-lg p-3 text-white text-sm">
-        <div className="flex items-center gap-2">
-          <i className="fas fa-hand-pointer"></i>
-          <span>Click on objects to explore</span>
+      {/* Instructions - Only show after welcome title fades */}
+      {!showWelcome && (
+        <div className="absolute bottom-4 right-4 z-10 bg-black/50 backdrop-blur-sm rounded-lg p-3 text-white text-sm animate-fade-in">
+          <div className="flex items-center gap-2">
+            <i className="fas fa-hand-pointer"></i>
+            <span>Click on objects to explore</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
