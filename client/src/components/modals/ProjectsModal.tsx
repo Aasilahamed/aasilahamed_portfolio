@@ -19,10 +19,10 @@ const projects: Project[] = [
   {
     id: 1,
     title: "AI-Powered FIR Assistant",
-    description: "An AI-based chatbot system that helps users file First Information Reports using natural language processing. Integrated voice-to-text and real-time response capabilities for ease of use.",
+    description: "Developed an AI-based chatbot system that helps users file First Information Reports using natural language processing. Integrated voice-to-text and real-time response capabilities for ease of use.",
     technologies: ["Python", "Natural Language Processing", "Voice-to-Text", "AI", "Chatbot"],
     github: "https://github.com/saasilahamed/fir-assistant",
-    demo: "https://fir-assistant-demo.com",
+    demo: "",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%234F46E5'/%3E%3Crect x='50' y='50' width='300' height='200' fill='%23FFF' rx='10'/%3E%3Ccircle cx='150' cy='130' r='20' fill='%234F46E5'/%3E%3Crect x='190' y='110' width='100' height='40' fill='%23E5E7EB' rx='20'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='16' font-weight='bold'%3EAI FIR Assistant%3C/text%3E%3C/svg%3E"
   },
   {
@@ -31,16 +31,16 @@ const projects: Project[] = [
     description: "An NFC-powered networking platform that lets users create digital profiles and order custom-designed NFC cards. Includes React-based frontend, dynamic dashboard, and profile builder workflow.",
     technologies: ["React.js", "NFC Technology", "Digital Profiles", "Dashboard", "Profile Builder"],
     github: "https://github.com/saasilahamed/anzoro",
-    demo: "https://anzoro-demo.com",
+    demo: "",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%2310B981'/%3E%3Crect x='50' y='80' width='120' height='80' fill='%23FFF' rx='10'/%3E%3Crect x='230' y='80' width='120' height='80' fill='%23FFF' rx='10'/%3E%3Cpath d='M170 120 L230 120' stroke='%23FFF' stroke-width='3'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='18' font-weight='bold'%3EAnzoro%3C/text%3E%3C/svg%3E"
   },
   {
     id: 3,
-    title: "Cognitive Firewall: AI-Based Scam Detection",
-    description: "Cognitive Firewall is a browser-based, real-time text analysis tool designed to identify emotionally manipulative and scam-related messages using AI algorithms.",
+    title: "Cognitive Firewall: AI-Based Scam & Manipulation Detection",
+    description: "It is a browser-based, real-time text analysis tool designed to identify emotionally manipulative and scam-related messages.",
     technologies: ["AI", "Text Analysis", "Browser Extension", "Scam Detection", "Real-time Processing"],
     github: "https://github.com/saasilahamed/cognitive-firewall",
-    demo: "https://cognitive-firewall-demo.com",
+    demo: "",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23EF4444'/%3E%3Cpath d='M200 80 L160 120 L200 160 L240 120 Z' fill='%23FFF'/%3E%3Crect x='190' y='100' width='20' height='40' fill='%23EF4444'/%3E%3Ccircle cx='200' cy='190' r='30' fill='%23FFF'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23FFF' font-size='16' font-weight='bold'%3ECognitive Firewall%3C/text%3E%3C/svg%3E"
   }
 ];

@@ -39,7 +39,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">AASIL AHAMED S</h3>
-              <p className="text-white/70">B.Sc. AI & ML Student | Full-Stack Developer | Event Organizer</p>
+              <p className="text-white/70">AI & ML Enthusiast | Full-Stack Developer | Event Organizer</p>
             </div>
           </div>
           
@@ -48,21 +48,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             <h4 className="text-lg font-semibold mb-3 text-white">Career Objective</h4>
             <div className="space-y-4 text-white/80">
               <p>
-                A passionate B.Sc. Artificial Intelligence and Machine Learning student with a strong interest 
-                in full-stack development and a knack for organizing events and building connections. I aim to 
-                contribute to innovative tech teams where I can apply and grow my development skills, take 
-                initiative, and collaborate effectively—while also creating meaningful experiences through 
-                community engagement and leadership.
-              </p>
-              <p>
-                Currently pursuing my degree at Rathinam College of Arts and Science, I have hands-on experience 
-                in web development, AI technologies, and event management. I've successfully organized national-level 
-                hackathons and developed AI-powered applications that solve real-world problems.
-              </p>
-              <p>
-                When I'm not coding, you'll find me exploring new technologies, designing UI/UX interfaces, 
-                photography, or cooking. I believe in continuous learning and sharing knowledge with the 
-                tech community through workshops and mentoring.
+                An passionate AI&ML enthusiast with a strong interest in full-stack development and a knack for organizing events and building connections. Aiming to contribute to innovative tech teams where I can apply and grow my skills, take initiative, collaborate effectively and create meaningful experiences through community engagement and leadership.
               </p>
             </div>
           </div>
@@ -73,19 +59,19 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
                 <i className="fas fa-map-marker-alt text-primary"></i>
-                <span>Based in Coimbatore, Tamil Nadu</span>
+                <span>Coimbatore, Tamil Nadu</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-graduation-cap text-primary"></i>
-                <span>B.Sc. AI & ML (2023-2026)</span>
+                <span>B.Sc. Artificial Intelligence and Machine Learning (2023-2026) | Rathinam College of Arts and Science | CGPA: 7.94</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-briefcase text-primary"></i>
-                <span>Web Scraping Intern at Data Pattern</span>
+                <span>Intern: Data Pattern (Web Scraping & Data Collection, 2023)</span>
               </div>
               <div className="flex items-center gap-3">
                 <i className="fas fa-heart text-primary"></i>
-                <span>Love Event Management & AI</span>
+                <span>Exploring | UI Designing | Photography | Cooking</span>
               </div>
             </div>
           </div>
@@ -122,15 +108,15 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
               </div>
               <div className="flex items-start gap-3">
                 <i className="fas fa-users text-primary mt-1"></i>
-                <span className="text-sm">Lead Organizer of "Hack Beyond Limits!" - National-Level 24-Hour Hackathon</span>
+                <span className="text-sm">Lead Organizer of "Hack Beyond Limits!" – National-Level 24-Hour Hackathon hosted by Rathinam College, uniting top tech talent across India.</span>
               </div>
               <div className="flex items-start gap-3">
                 <i className="fas fa-chalkboard-teacher text-primary mt-1"></i>
-                <span className="text-sm">Conducted tech workshops on UI/UX and Figma basics</span>
+                <span className="text-sm">Conducted tech workshops on UI/UX and Figma basics for the student community [Tech Hub].</span>
               </div>
               <div className="flex items-start gap-3">
                 <i className="fas fa-handshake text-primary mt-1"></i>
-                <span className="text-sm">Volunteered at Mega Placement Opportunity by Tamil Nadu Government</span>
+                <span className="text-sm">Student co-ordinator for Mega Placement drive organized by Tamil Nadu Government at Rathinam College of Arts & Science.</span>
               </div>
             </div>
           </div>

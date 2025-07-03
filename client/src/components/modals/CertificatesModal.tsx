@@ -18,35 +18,75 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Network Topologies & Technologies",
-    issuer: "Infosys Springboard",
-    date: "2023",
-    image: "/certificates/infosys-network.jpg", // Replace with your actual certificate image
-    credentialId: "INFOSYS-NT-2023"
+    title: "Fundamental AI Concepts",
+    issuer: "Microsoft",
+    date: "December 10, 2024",
+    image: "/attached_assets/photo_1_2025-06-30_14-49-41.jpg",
+    credentialId: "MS-AI-2024"
   },
   {
     id: 2,
-    title: "Basics of Python",
-    issuer: "Infosys Springboard",
-    date: "2023",
-    image: "/certificates/infosys-python.jpg", // Replace with your actual certificate image
-    credentialId: "INFOSYS-PY-2023"
+    title: "Fundamentals of Machine Learning",
+    issuer: "Microsoft",
+    date: "December 10, 2024",
+    image: "/attached_assets/photo_2_2025-06-30_14-49-41.jpg",
+    credentialId: "MS-ML-2024"
   },
   {
     id: 3,
-    title: "Soft Skills for IT",
-    issuer: "Great Learning Academy",
-    date: "2023",
-    image: "/certificates/greatlearning-softskills.jpg", // Replace with your actual certificate image
-    credentialId: "GLA-SS-2023"
+    title: "Oracle Cloud Data Management 2023 Certified Foundations Associate",
+    issuer: "Oracle",
+    date: "August 27, 2023",
+    image: "/attached_assets/photo_7_2025-06-20_16-41-07.jpg",
+    credentialId: "ORACLE-2023"
   },
   {
     id: 4,
-    title: "Introduction to Web Development",
+    title: "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    issuer: "Oracle",
+    date: "July 22, 2023",
+    image: "/attached_assets/photo_9_2025-06-20_16-41-07.jpg",
+    credentialId: "ORACLE-INFRA-2023"
+  },
+  {
+    id: 5,
+    title: "Hack Beyond Limits (24-hour Hackathon)",
+    issuer: "Rathinam College of Arts and Science",
+    date: "February 22-23, 2025",
+    image: "/attached_assets/photo_12_2025-06-20_16-41-07.jpg",
+    credentialId: "HBL-2025"
+  },
+  {
+    id: 6,
+    title: "LeadPro Infotech UX/UI Workshop",
     issuer: "LeadPro Infotech",
-    date: "2023",
-    image: "/certificates/leadpro-webdev.jpg", // Replace with your actual certificate image
-    credentialId: "LEADPRO-WD-2023"
+    date: "2024",
+    image: "/attached_assets/photo_13_2025-06-20_16-41-07.jpg",
+    credentialId: "LEADPRO-2024"
+  },
+  {
+    id: 7,
+    title: "Hack with Google Developer Group – Finalist",
+    issuer: "Google Developer Group",
+    date: "2024",
+    image: "/attached_assets/photo_14_2025-06-20_16-41-07.jpg",
+    credentialId: "GDG-HACK-2024"
+  },
+  {
+    id: 8,
+    title: "Beyond Abstraction - A Router Protocol & Pivot Hacker House",
+    issuer: "Router Protocol & Pivot",
+    date: "2024",
+    image: "/attached_assets/photo_17_2025-06-20_16-41-07.jpg",
+    credentialId: "ROUTER-PIVOT-2024"
+  },
+  {
+    id: 9,
+    title: "Hack knight'25 VIT Chennai",
+    issuer: "VIT Chennai",
+    date: "2025",
+    image: "/attached_assets/photo_18_2025-06-20_16-41-07.jpg",
+    credentialId: "VIT-HACK-2025"
   }
 ];
 
@@ -78,6 +118,7 @@ export default function CertificatesModal({ isOpen, onClose }: CertificatesModal
             <i className="fas fa-times text-xl"></i>
           </button>
         </div>
+        
         
         {!selectedCertificate ? (
           /* Certificates Grid */

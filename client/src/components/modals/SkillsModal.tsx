@@ -11,31 +11,25 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // Frontend
-  { name: "React.js", level: 85, icon: "fab fa-react", category: "Frontend" },
-  { name: "JavaScript", level: 90, icon: "fab fa-js-square", category: "Frontend" },
-  { name: "HTML", level: 95, icon: "fab fa-html5", category: "Frontend" },
-  { name: "CSS", level: 90, icon: "fab fa-css3-alt", category: "Frontend" },
-  { name: "Tailwind CSS", level: 85, icon: "fas fa-palette", category: "Frontend" },
-  
-  // Backend
-  { name: "Node.js", level: 80, icon: "fab fa-node-js", category: "Backend" },
+  // Technical Skills
   { name: "Python", level: 90, icon: "fab fa-python", category: "Backend" },
+  { name: "JavaScript", level: 90, icon: "fab fa-js-square", category: "Frontend" },
+  { name: "CSS", level: 90, icon: "fab fa-css3-alt", category: "Frontend" },
+  { name: "React.js", level: 85, icon: "fab fa-react", category: "Frontend" },
+  { name: "Node.js", level: 80, icon: "fab fa-node-js", category: "Backend" },
+  { name: "Git", level: 85, icon: "fab fa-git-alt", category: "Tools" },
+  { name: "Tailwind CSS", level: 85, icon: "fas fa-palette", category: "Frontend" },
+  { name: "GitHub", level: 85, icon: "fab fa-github", category: "Tools" },
+  { name: "HTML", level: 95, icon: "fab fa-html5", category: "Frontend" },
   { name: "MongoDB", level: 75, icon: "fas fa-leaf", category: "Backend" },
   { name: "MySQL", level: 80, icon: "fas fa-database", category: "Backend" },
+  { name: "Canva", level: 75, icon: "fas fa-image", category: "Design" },
   { name: "Firebase", level: 75, icon: "fas fa-fire", category: "Backend" },
-  
-  // AI & Tools
-  { name: "Machine Learning", level: 85, icon: "fas fa-brain", category: "AI/ML" },
-  { name: "Artificial Intelligence", level: 80, icon: "fas fa-robot", category: "AI/ML" },
   { name: "N8N", level: 70, icon: "fas fa-network-wired", category: "Tools" },
-  { name: "Git", level: 85, icon: "fab fa-git-alt", category: "Tools" },
-  { name: "GitHub", level: 85, icon: "fab fa-github", category: "Tools" },
-  
-  // Design
   { name: "UI/UX Design", level: 80, icon: "fas fa-paint-brush", category: "Design" },
   { name: "Figma", level: 85, icon: "fab fa-figma", category: "Design" },
-  { name: "Canva", level: 75, icon: "fas fa-image", category: "Design" }
+  { name: "Roboflow", level: 70, icon: "fas fa-robot", category: "AI/ML" },
+  { name: "Google Colab", level: 80, icon: "fas fa-cloud", category: "AI/ML" },
 ];
 
 const categories = ["Frontend", "Backend", "AI/ML", "Tools", "Design"];
@@ -116,23 +110,22 @@ export default function SkillsModal({ isOpen, onClose }: SkillsModalProps) {
         
         {/* Skill Legend */}
         <div className="mt-6 p-4 bg-muted rounded-lg">
-          <h4 className="font-semibold mb-3">Proficiency Levels</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+          <h4 className="font-semibold mb-3">Soft Skills</h4>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span>Expert (90-100%)</span>
+              <span>Effective Communication</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-              <span>Advanced (80-89%)</span>
+              <span>Problem Solving</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <span>Intermediate (70-79%)</span>
+              <span>Time Management</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <span>Beginner (60-69%)</span>
+              <span>Leadership</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>Event Management</span>
             </div>
           </div>
         </div>
